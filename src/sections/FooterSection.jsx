@@ -13,8 +13,8 @@ const FooterSection = () => {
         className="w-full object-cover -translate-y-1"
       />
 
-      <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]">
-        <div className="overflow-hidden z-10">
+      <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh] z-10">
+        <div className="overflow-hidden relative z-10">
           <h1 className="general-title text-center text-milk py-5">
             #CHUGRESPONSIBLY
           </h1>
@@ -23,7 +23,7 @@ const FooterSection = () => {
         {isMobile ? (
           <img
             src="/images/footer-drink.png"
-            className="absolute top-0 object-contain"
+            className="absolute top-0 object-contain z-0"
           />
         ) : (
           <video
@@ -31,11 +31,11 @@ const FooterSection = () => {
             autoPlay
             playsInline
             muted
-            className="absolute top-0 object-contain mix-blend-lighten"
+            className="absolute top-0 object-contain mix-blend-lighten z-0"
           />
         )}
 
-        <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
+        <div className="flex-center gap-5 relative z-20 md:mt-20 mt-5">
           <a
             href="https://linkedin.com/in/singhaditya5711"
             target="_blank"
@@ -62,7 +62,7 @@ const FooterSection = () => {
           </a>
         </div>
 
-        <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
+        <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium relative z-20">
           <div className="flex items-center md:gap-16 gap-5">
             <div>
               <p>SPYLT Flavors</p>
@@ -79,7 +79,7 @@ const FooterSection = () => {
             </div>
           </div>
 
-          <div className="md:max-w-lg">
+          <div className="md:max-w-lg relative z-30">
             <p>
               Get Exclusive Early Access and Stay Informed About Product
               Updates, Events, and More!
@@ -94,16 +94,16 @@ const FooterSection = () => {
                   window.location.href = `mailto:singhaditya5711@gmail.com?subject=Contact from ${email}&body=Email: ${email}%0D%0A%0D%0AMessage:`;
                 }
               }}
-              className="flex justify-between items-center border-b border-[#D9D9D9] py-5 md:mt-10"
+              className="flex justify-between items-center border-b border-[#D9D9D9] py-5 md:mt-10 relative z-40"
             >
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                className="w-full placeholder:font-sans placeholder:text-[#999999] bg-transparent outline-none"
+                className="w-full placeholder:font-sans placeholder:text-[#999999] bg-transparent outline-none relative z-50"
                 required
               />
-              <button type="submit" className="cursor-pointer">
+              <button type="submit" className="cursor-pointer relative z-50">
                 <img src="/images/arrow.svg" alt="arrow" />
               </button>
             </form>
