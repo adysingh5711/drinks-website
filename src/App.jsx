@@ -11,6 +11,8 @@ const App = () => {
     <main>
       <NavBar />
       <HeroSection />
+      <MessageSection />
+      <FlavorSection />
     </main>
   );
 };
