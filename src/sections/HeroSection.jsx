@@ -13,6 +13,7 @@ const HeroSection = () => {
   });
 
   useGSAP(() => {
+    // Text Reveal Animation
     const titleSplit = SplitText.create(".hero-title", {
       type: "chars",
     });
@@ -25,15 +26,15 @@ const HeroSection = () => {
       opacity: 1,
       y: 0,
       ease: "power1.inOut",
-    })
+    }) //has default duration of 0.5 seconds
       .to(
         ".hero-text-scroll",
         {
-          duration: 1,
+          duration: 1, //has duration of 1 second to make it slower and complement the text reveal animation
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "circ.out",
         },
-        "-=0.5"
+        "-=0.5" //has delay of 0.5 seconds to make it start after the text reveal animation
       )
       .from(
         titleSplit.chars,
@@ -42,10 +43,11 @@ const HeroSection = () => {
           stagger: 0.02,
           ease: "power2.out",
         },
-        "-=0.5"
+        "-=0.5" //has delay of 0.5 seconds to make it start after the text reveal animation
       );
 
     const heroTl = gsap.timeline({
+      // Hero Section Scroll Trigger Animation
       scrollTrigger: {
         trigger: ".hero-container",
         start: "1% top",
