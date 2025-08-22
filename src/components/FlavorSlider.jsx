@@ -14,6 +14,7 @@ const FlavorSlider = () => {
   useGSAP(() => {
     const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
 
+    // Flavor Section Title's stopping for devices with width less than 1024px
     if (!isTablet) {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -31,6 +32,7 @@ const FlavorSlider = () => {
       });
     }
 
+    // Flavor Section Title variable positioned but combined and continuued Animation
     const titleTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".flavor-section",
